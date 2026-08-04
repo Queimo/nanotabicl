@@ -1,0 +1,10 @@
+spec_version: "0.1.0"
+task: regression
+rows: {min: 128, max: 512, train_fraction: [0.30, 0.90]}
+molecules: {library_size: [8, 32], components_per_row: [1, 4], atoms: [2, 24], atom_type_count: 16, bond_type_count: 4}
+descriptors: {basis_version: "0.1.0", known_dim: 16, anonymous_dim: 48, visible_features: [16, 96], hidden_fraction: [0.20, 0.70]}
+interactions: {max_order: 3, pair_probability: 0.85, triple_probability: 0.25, rank: [1, 8]}
+scm: {latent_nodes: [1, 6], regime_change_probability: 0.15, hidden_confounder_probability: 0.10}
+property_family: {additive_excess: 0.45, log_additive_excess: 0.20, bounded_response: 0.10, generic_scm: 0.25}
+measurement: {noise_std: [0.00, 0.20], heteroscedastic_probability: 0.30, batch_effect_probability: 0.10}
+filter: {predictive_signal: false, min_oob_r2: 0.02, max_attempts: 32}
